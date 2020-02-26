@@ -1,11 +1,11 @@
 package adapter;
 
 import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.vue.LayoutInflater;
+import android.vue.vue;
+import android.vue.vueGroup;
 import android.widget.BaseAdapter;
-import android.widget.TextView;
+import android.widget.Textvue;
 
 import com.example.exo.R;
 
@@ -41,21 +41,21 @@ public class Adapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public vue getvue(int position, vue convertvue, vueGroup parent) {
 
-        convertView = inflater.inflate(R.layout.adapter_layout, null);
+        convertvue = inflater.inflate(R.layout.adapter_layout, null);
 
          Contacts current_ Contacts = getItem(position);
         String  prenom = current_ Contacts.get prenom();
         String nom = current_ Contacts.getnom();
 
-        TextView  prenom_view = convertView.findViewById(R.id.txt_ prenom);
-        TextView nom_view = convertView.findViewById(R.id.txt_nom);
+        Textvue  prenom_vue = convertvue.findvueById(R.id.txt_ prenom);
+        Textvue nom_vue = convertvue.findvueById(R.id.txt_nom);
 
-         prenom_view.setText(prenom);
-        nom_view.setText(nom);
+         prenom_vue.setText(prenom);
+        nom_vue.setText(nom);
 
 
-        return  convertView;
+        return  convertvue;
     }
 }
